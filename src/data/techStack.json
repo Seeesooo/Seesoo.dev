@@ -1,0 +1,68 @@
+[
+	{
+		"name": "Arch Linux",
+		"icon": "simple-icons:archlinux",
+		"url": "https://archlinux.org",
+		"color": "#1793D1"
+	},
+	{
+		"name": "Astro",
+		"icon": "simple-icons:astro",
+		"url": "https://astro.build",
+		"color": "#BC52EE"
+	},
+	{
+		"name": "Bash",
+		"icon": "simple-icons:gnubash",
+		"url": "https://www.gnu.org/software/bash/",
+		"color": "#4EAA25"
+	},
+	{
+		"name": "Cloudflare",
+		"icon": "simple-icons:cloudflare",
+		"url": "https://cloudflare.com",
+		"color": "#F38020"
+	},
+	{
+		"name": "Docker",
+		"icon": "simple-icons:docker",
+		"url": "https://docker.com",
+		"color": "#2496ED"
+	},
+	{
+		"name": "Git",
+		"icon": "simple-icons:git",
+		"url": "https://git-scm.com/",
+		"color": "#F05032"
+	},
+	{
+		"name": "Github",
+		"icon": "simple-icons:github",
+		"url": "https://github.com",
+		"color": "#6CC644"
+	},
+	{
+		"name": "NodeJS",
+		"icon": "simple-icons:nodedotjs",
+		"url": "https://nodejs.org",
+		"color": "#5FA04E"
+	},
+	{
+		"name": "Tailwind CSS",
+		"icon": "simple-icons:tailwindcss",
+		"url": "https://tailwindcss.com",
+		"color": "#06B6D4"
+	},
+	{
+		"name": "TypeScript",
+		"icon": "simple-icons:typescript",
+		"url": "https://typescriptlang.org",
+		"color": "#3178C6"
+	},
+	{
+		"name": "Javascript",
+		"icon": "simple-icons:javascript",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+		"color": "#F7DF1E"
+	}
+]

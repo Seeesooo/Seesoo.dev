@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import profileImage from "/src/assets/Profile.webp";
+import allStack from "../data/techStack.json";
+
+const stack = allStack.filter((item) =>
+	["Tailwind CSS", "Astro", "TypeScript", "Git", "Javascript"].includes(
+		item.name,
+	),
+);
+
+const discordId = "1333961074877399160";
+---
+
+<Layout title="Home" description="A little stuff about me.">
+	<div class="max-w-5xl mx-auto px-6 py-16">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+			<!-- LEFT COLUMN -->
+			<div class="flex flex-col gap-12">
+				<!-- profile -->
+				<section class="flex flex-col gap-6">
+					<div class="flex items-center gap-6">
+						<div class="relative shrink-0">
+							<Image
+								src={profileImage}
+								alt="Seesoo"
+								width={96}
+								height={96}
+								class="w-24 h-24 rounded-4xl object-cover"
+							/>
+							<span
+								class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-green-500 ring-2 ring-white dark:ring-neutral-950"
+							></span>
+						</div>
+						<div class="flex flex-col gap-1">
+							<h1 class="text-2xl font-medium">Seesoo</h1>
+							<p class="text-sm text-neutral-500 dark:text-neutral-400">
+								@csudev
+							</p>
+							<p class="text-xs text-neutral-500 dark:text-neutral-400">
+								he/him
+							</p>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<div
+							class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400"
+						>
+							<Icon name="lucide:cake" class="size-4 shrink-0" />
+							<span>Minor</span>
+						</div>
+						<div
+							class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400"
+						>
+							<Icon name="lucide:map-pin" class="size-4 shrink-0" />
+							<span>North America</span>
+						</div>
+						<div
+							class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400"
+						>
+							<Icon name="lucide:languages" class="size-4 shrink-0" />
+							<span>EN / ES</span>
+						</div>
+					</div>
+				</section>
+
+				<!-- about me -->
+				<section class="flex flex-col gap-3">
+					<h2
+						class="text-xs font-medium uppercase tracking-widest text-neutral-500 dark:text-neutral-400"
+					>
+						About me
+					</h2>
+					<p
+						class="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed"
+					>
+						Hello, I'm csu I create things out of passion, and frustration. Most
+						of my projects are open-source, but target a specific niche. I'm
+						very active on Discord, so if you want to chat do throw me a message
+						there! I like Anime, Novels, and what not. Also Read Mother of
+						Learning! You won't regret it.
+					</p>
+				</section>
+
+				<!-- tech stack -->
+				<section class="flex flex-col gap-3">
+					<h2
+						class="text-xs font-medium uppercase tracking-widest text-neutral-500 dark:text-neutral-400"
+					>
+						Stack & tools
+					</h2>
+					<div class="flex flex-wrap gap-2">
+						{
+							stack.map((item) => (
+								<a
+									href={item.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									style={`--brand: ${item.color}`}
+									class="group flex items-center gap-2 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 transition-all duration-200 hover:border-neutral-400 dark:hover:border-(--brand)"
+								>
+									<Icon
+										name={item.icon}
+										class="size-4 text-neutral-500 dark:text-neutral-400 transition-colors duration-200 group-hover:text-(--brand)"
+									/>
+									<span class="text-sm text-neutral-500 dark:text-neutral-400 transition-colors duration-200 group-hover:text-(--brand)">
+										{item.name}
+									</span>
+								</a>
+							))
+						}
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</Layout>
